@@ -1,0 +1,18 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Project:</h2>
+E:\chromedownload\PM25PWM_WIFIV3\PM25PWM_WIFIV_sharp\bt1.uvproj
+Project File Date:  12/16/2016
+
+<h2>Output:</h2>
+Rebuild target 'Target 1'
+assembling STARTUP.A51...
+compiling main.c...
+linking...
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?PR?_DELAY_01MS?MAIN
+Program Size: data=186.5 xdata=0 code=2031
+creating hex file from "wifi"...
+"wifi" - 0 Error(s), 1 Warning(s).

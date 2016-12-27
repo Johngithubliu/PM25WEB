@@ -1,0 +1,84 @@
+C51 COMPILER V9.52.0.0   MBUS                                                              11/11/2016 17:23:12 PAGE 1   
+
+
+C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MBUS
+OBJECT MODULE PLACED IN mbus.OBJ
+COMPILER INVOKED BY: C:\Keil\C51\BIN\C51.EXE mbus.c BROWSE DEBUG OBJECTEXTEND TABS(2)
+
+line level    source
+
+   1          
+   2          #include <STC15F2K60S2.H>
+   3          
+   4          
+   5          #ifndef UART_C
+   6          #define UART_C
+   7          #define UART_MEM
+   8          
+   9          unsigned char wRxCounter;
+  10          /*********************************************************************************************************
+             -**************
+  11          * Function Name: uart_send
+  12          * Description  : UART
+  13          * Arguments    : None                    
+  14          * Return Value : None
+  15          **********************************************************************************************************
+             -*************/
+  16          #define Manu_IDH 0x88
+  17          #define Manu_IDL 0x66
+  18          #define MAX_BUF 90
+  19          extern unsigned char RxBuf[MAX_BUF];
+  20          
+  21          //extern unsigned char TxBuf[64];
+  22          extern bit RxStatus;
+  23          extern bit TxStatus;
+  24          void receive(void) interrupt 3
+  25          {
+  26   1        static unsigned char RxCounter=0;
+  27   1        static unsigned char UartVerify;
+  28   1        unsigned char Uarttemp;
+  29   1        if((RxCounter==0)&&(SBUF!=0x68))
+  30   1        {
+  31   2          UartVerify=0;
+  32   2          return;
+  33   2        }
+  34   1        RxBuf[RxCounter]=SBUF;
+  35   1        UartVerify+=SBUF;
+  36   1        RxCounter++;
+  37   1        if((RxCounter>=MAX_BUF)||(RxBuf[10]<3)||((RxBuf[10]>0x4b)))
+  38   1        {
+  39   2          RxCounter=0;
+  40   2          UartVerify=0;
+  41   2          return;
+  42   2        }
+  43   1        
+  44   1        if((RxCounter==RxBuf[10]+13)&&(16==SBUF))
+  45   1        {
+  46   2          Uarttemp=UartVerify-RxBuf[RxCounter-2]-RxBuf[wRxCounter-1];
+  47   2          if(RxBuf[RxCounter-2]==Uarttemp)
+  48   2          {
+  49   3            RxStatus=1;
+  50   3            UartVerify=0;
+  51   3          }
+  52   2      
+  53   2        }
+C51 COMPILER V9.52.0.0   MBUS                                                              11/11/2016 17:23:12 PAGE 2   
+
+  54   1      
+  55   1      }
+  56          
+  57          #endif 
+
+
+MODULE INFORMATION:   STATIC OVERLAYABLE
+   CODE SIZE        =    134    ----
+   CONSTANT SIZE    =   ----    ----
+   XDATA SIZE       =   ----    ----
+   PDATA SIZE       =   ----    ----
+   DATA SIZE        =      3    ----
+   IDATA SIZE       =   ----    ----
+   BIT SIZE         =   ----    ----
+END OF MODULE INFORMATION.
+
+
+C51 COMPILATION COMPLETE.  0 WARNING(S),  0 ERROR(S)
