@@ -1,0 +1,17 @@
+Field=Comment~String~Comment~100|Field=Description~String~Description~100|Field=Designator~String~Designator~100|Field=Footprint~String~Footprint~100|Field=LibRef~String~LibRef~100|Field=Quantity~Integer~Quantity~100|ReportField=Currency~<none>|ReportField=ProductionQuantity~1|ReportField=ProjectFileName~bt.PrjPcb|ReportField=ProjectFullPath~F:\shuibiao\蓝牙通讯模块\hardware\bt.PrjPcb|ReportField=Title~Bill of Materials For PCB Document [bt.PcbDoc]|ReportField=TotalQuantity~33|ReportField=ReportTime~9:08:06|ReportField=ReportDate~2016/11/11|ReportField=ReportDateTime~2016/11/11 9:08:06|ReportField=OutputName~Bill of Materials|ReportField=OutputType~BOM_PartType|ReportField=GeneratorName~BOM|ReportField=GeneratorDescription~Bill of Materials|ReportField=VariantName~None|ReportField=DataSourceFileName~bt.PcbDoc|ReportField=DataSourceFullPath~F:\shuibiao\蓝牙通讯模块\hardware\bt.PcbDoc
+Cap Semi|Capacitor (Semiconductor SIM Model)|C1, C3, C5, C6, C7, C8, C9|C0805|Cap Semi|7
+Cap Pol1|Polarized Capacitor (Radial)|C2, C4|3528|Cap Pol1|2
+LED0|Typical INFRARED GaAs LED|D1|LED1|LED0|1
+LED0|Typical INFRARED GaAs LED|D2, D3|0805|LED0|2
+Comment||Designator1|HDR1X7||1
+Header 2|Header, 2-Pin|P1|HDR1X2|Header 2|1
+Header 7|Header, 7-Pin|P2|HDR1X7|Header 7|1
+Header 4|Header, 4-Pin|P3, P4|HDR1X4|Header 4|2
+2301|P-Channel MOSFET|Q1|SOT-23 - LDO|MOSFET-P|1
+Photo NPN|NPN Phototransistor|Q2|SIP3|Photo NPN|1
+2302|N-Channel MOSFET|Q3|SOT-23 - LDO|MOSFET-N|1
+Res2|Resistor|R1, R2, R3, R4, R5, R6, R7, R8, R9|C0805|Res2|9
+SW-PB|Switch|S1|KEY4|SW-PB|1
+XC6206P302PR|Voltage Regulator|U1|SOT-23 - LDO|Volt Reg|1
+BLE 4.0||U2|BLE4.0|BLE 4.0|1
+STC15W201S_SOP16_DIP16||U3|SOP16|STC15W201S_SOP16_DIP16|1

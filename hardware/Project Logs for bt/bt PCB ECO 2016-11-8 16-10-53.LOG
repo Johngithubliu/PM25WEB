@@ -1,0 +1,16 @@
+Removed Pin From Net: NetName=NetD1_2 Pin=D1-2
+Removed Pin From Net: NetName=NetC1_2 Pin=Q1-1
+Removed Pin From Net: NetName=GND Pin=Q1-2
+Removed Pin From Net: NetName=NetD1_2 Pin=Q1-3
+Removed Pin From Net: NetName=V30 Pin=R4-2
+Change Component DesignItemId : Designator=Q1 Old DesignItemId=MOSFET-N New DesignItemId=MOSFET-P
+Change Component Comment : Designator=Q1 Old Comment=2302 New Comment=2301
+Change Component Description : Designator=Q1 Old Description=N-Channel MOSFET New Description=P-Channel MOSFET
+Added Pin To Net: NetName=GND Pin=D1-2
+Added Pin To Net: NetName=NetD1_2 Pin=Q1-1
+Added Pin To Net: NetName=NetC1_2 Pin=Q1-2
+Added Pin To Net: NetName=V30 Pin=Q1-3
+Added Pin To Net: NetName=NetD1_2 Pin=R4-2
+Change Net Name : Old Net Name=NetD1_2 New Net Name=NetQ1_1
+Added Member To Class: ClassName=bt Member=Component U2 BLE 4.0
+Added Room: Name=bt

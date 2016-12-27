@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=V30 Pin=Q2-3
+Change Component Footprint: Designator=R1 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R2 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R3 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R4 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R5 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R6 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R7 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R8 Old Footprint=0805 New Footprint=C0805
+Change Component Footprint: Designator=R9 Old Footprint=0805 New Footprint=C0805
+Added Room: Name=bt
