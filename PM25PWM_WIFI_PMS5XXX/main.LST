@@ -1,4 +1,4 @@
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 1   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 1   
 
 
 C51 COMPILER V9.52.0.0, COMPILATION OF MODULE MAIN
@@ -62,7 +62,7 @@ line level    source
   53          bit TxStatus;
   54          bit mBus_receive;
   55          bit IR;
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 2   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 2   
 
   56          bit f_1000s;
   57          bit power;
@@ -126,14 +126,14 @@ line level    source
  115   2          delay_ms(200);
  116   2          delay_ms(200);
  117   2          delay_ms(200);
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 3   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 3   
 
  118   2          
  119   2          
  120   2          strcpy(RxBuf,"AT+CIPSEND=41\r\n");
  121   2          send(strlen(RxBuf));
  122   2          
- 123   2          strcpy(RxBuf,"kiji6lu\r\n");
+ 123   2          strcpy(RxBuf,"keji6lu\r\n");
  124   2          send(strlen(RxBuf));
  125   2          
  126   2      //    strcpy(RxBuf,ATCIPSEND32);
@@ -190,7 +190,7 @@ line level    source
  177   1      }
  178          void init_tcp()
  179          {
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 4   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 4   
 
  180   1        unsigned char i;
  181   1      //  unsigned char TempBuf[15];
@@ -198,30 +198,30 @@ line level    source
  183   1      
  184   1        Uart115200P30();
  185   1        mBus_receive=0;
- 186   1        delay_s(10);
+ 186   1        delay_s(3);
  187   1        time_led2=200;
  188   1      
- 189   1        strcpy(RxBuf,ATCWSTARTSMART);
+ 189   1        strcpy(RxBuf,ATCIPMODE1);
  190   1        send(strlen(RxBuf));
- 191   1        
- 192   1        for(i=0;i<120;i++)
- 193   1        { 
- 194   2          time_led1=200;
- 195   2          delay_s(1);
- 196   2        }
- 197   1        strcpy(RxBuf,ATCWSTOPSMART);
- 198   1        send(strlen(RxBuf));
- 199   1        strcpy(RxBuf,"AT+RST\r\n");
- 200   1        send(strlen(RxBuf));
- 201   1        delay_s(3);
- 202   1          
- 203   1        strcpy(RxBuf,ATCIPMUX0);
- 204   1        send(strlen(RxBuf));
- 205   1          
- 206   1        strcpy(RxBuf,ATCIPMODE1);
+ 191   1      
+ 192   1        strcpy(RxBuf,ATCIPMUX0);
+ 193   1        send(strlen(RxBuf));
+ 194   1          
+ 195   1        
+ 196   1        strcpy(RxBuf,ATCWSTARTSMART);
+ 197   1        send(strlen(RxBuf));
+ 198   1        
+ 199   1        for(i=0;i<120;i++)
+ 200   1        { 
+ 201   2          time_led1=200;
+ 202   2          delay_s(1);
+ 203   2        }
+ 204   1        strcpy(RxBuf,ATCWSTOPSMART);
+ 205   1        send(strlen(RxBuf));
+ 206   1        strcpy(RxBuf,"AT+RST\r\n");
  207   1        send(strlen(RxBuf));
- 208   1      
- 209   1        
+ 208   1        delay_s(3);
+ 209   1          
  210   1        RxCounter=0;
  211   1          
  212   1      }
@@ -254,7 +254,7 @@ line level    source
  239   1        T2L = 0xD0;   //??????
  240   1        T2H = 0xFF;   //??????
  241   1        AUXR |= 0x10;   //?????2
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 5   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 5   
 
  242   1        
  243   1        S_P30;
@@ -318,7 +318,7 @@ line level    source
  301   1        
  302   1        if(++count_pwm>=MAX_SPEED)
  303   1        {
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 6   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 6   
 
  304   2          count_pwm=0;
  305   2          if(power)P37=1;
@@ -382,7 +382,7 @@ line level    source
  363   1        PCON|=0x02;
  364   1      
  365   1        _nop_();
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 7   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 7   
 
  366   1        _nop_();  
  367   1      }
@@ -446,7 +446,7 @@ line level    source
  425   5                  RxCounter=0;
  426   5                  receive_step=0;
  427   5                }
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 8   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 8   
 
  428   4                    
  429   4                break;
@@ -510,7 +510,7 @@ line level    source
  487   2          {
  488   3            TxStatus=0;
  489   3          
-C51 COMPILER V9.52.0.0   MAIN                                                              12/27/2016 13:02:16 PAGE 9   
+C51 COMPILER V9.52.0.0   MAIN                                                              12/28/2016 17:26:22 PAGE 9   
 
  490   3            
  491   3          }

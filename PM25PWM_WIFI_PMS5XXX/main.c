@@ -120,7 +120,7 @@ void main()
 		strcpy(RxBuf,"AT+CIPSEND=41\r\n");
 		send(strlen(RxBuf));
 		
-		strcpy(RxBuf,"kiji6lu\r\n");
+		strcpy(RxBuf,"keji6lu\r\n");
 		send(strlen(RxBuf));
 		
 //		strcpy(RxBuf,ATCIPSEND32);
@@ -183,9 +183,16 @@ void init_tcp()
 
 	Uart115200P30();
 	mBus_receive=0;
-	delay_s(10);
+	delay_s(3);
 	time_led2=200;
 
+	strcpy(RxBuf,ATCIPMODE1);
+	send(strlen(RxBuf));
+
+	strcpy(RxBuf,ATCIPMUX0);
+	send(strlen(RxBuf));
+		
+	
 	strcpy(RxBuf,ATCWSTARTSMART);
 	send(strlen(RxBuf));
 	
@@ -200,13 +207,6 @@ void init_tcp()
 	send(strlen(RxBuf));
 	delay_s(3);
 		
-	strcpy(RxBuf,ATCIPMUX0);
-	send(strlen(RxBuf));
-		
-	strcpy(RxBuf,ATCIPMODE1);
-	send(strlen(RxBuf));
-
-	
 	RxCounter=0;
 		
 }
